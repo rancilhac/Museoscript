@@ -11,6 +11,11 @@ Museoscript relies on three external softwares that must be installed in order t
   - vsearch (https://github.com/torognes/vsearch)
   
   The script must be modified to have the right path to the trimmomatic executable. To do so, open the script in a text editor and edit the line 122 to provide the correct path:
+  
   java -jar ~/path/to/trimmomatic/trimmomatic-0.XX.jar SE -phred33 $i trimmed_reads/"$name"_trimmed.fastq.gz ILLUMINACLIP:/home/lois/softwares/Trimmomatic-0.38/adapters/TruSeq3-SE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:2:25 MINLEN:36 &> trimmed_reads/trimmomatic_"$name".log
   
-  This line can be modified to change Trimmomatic's parameters as well.
+  This line can be modified to change the settings of Trimmomatic as well.
+  
+  # Usage
+  
+  
