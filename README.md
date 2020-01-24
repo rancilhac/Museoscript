@@ -5,17 +5,18 @@ Museoscript is a bash script wrapping several programs, aiming to process High-T
 
 # Dependencies
 
-Museoscript relies on three external softwares that must be installed in order to use it:
+Museoscript uses three external softwares that must be installed in order to use it:
   - Trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
   - Seqtk (https://github.com/lh3/seqtk)
   - vsearch (https://github.com/torognes/vsearch)
   
-  The script must be modified to have the right path to the trimmomatic executable. To do so, open the script in a text editor and edit the line 122 to provide the correct path:
+GNU parralel (https://www.gnu.org/software/parallel/) must also be installed.
   
-  java -jar path/to/trimmomatic/trimmomatic-0.XX.jar SE -phred33 $i trimmed_reads/"$name"_trimmed.fastq.gz ILLUMINACLIP:path/to/trimmomatic/adapters/TruSeq3-SE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:2:25 MINLEN:36 &> trimmed_reads/trimmomatic_"$name".log
+To set path to the trimmomatic executable, the script must be modified. This can be done easily by opening the script in a text editor and editing the line 122 to provide the correct path (make sure to change both the path to the executable and to the adapters):
   
-  This line can be modified to change the settings of Trimmomatic as well.
+  echo "java -jar path/to/trimmomatic/trimmomatic-0.XX.jar SE -phred33 $i trimmed_reads/$name-trimmed.fastq.gz ILLUMINACLIP:/path/to/trimmomatic/adapters/TruSeq3-SE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:2:25 MINLEN:36 &> trimmed_reads/trimmomatic-$name.log" >> run_trimmomatic
+  
+  This line can be modified to change other settings of Trimmomatic as well.
   
   # Usage
-  
   
