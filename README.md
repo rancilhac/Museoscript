@@ -1,7 +1,7 @@
 # Museoscript
 # Introduction
 
-Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly in the context of taxonomy and systematics studies. More in details, this script takes as input raw illumina reads and, after trimming and quality checking, aligns them to a set of reference sequences with vsearch, using an user-specified similarity threshold. It outputs a table summarizing the amount of reads matching each of the reference sequences, as well as the lists of these reads, that can be used to retrieve the sequences from the original data (in order for exemple to assemble consensus sequences). 
+Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly to assign them to species and integrate them in phylogenetic analyses in the context of taxonomics and systematics studies. More in details, this script trims and cleans the raw reads and align them to a set of reference sequences based on an user-provided similarity threshold. The output is a summary of the amount of reads matching the different reference sequences, as well as the list of these reads, that can be used to assembled consensus sequences (see details below).
 
 # Dependencies
 
@@ -20,3 +20,11 @@ To set path to the trimmomatic executable, the script must be modified. This can
   
   # Usage
   
+arguments: 
+	-h | --help : print a help message and exit
+	-r | --ref : path to a directory containing the reference sequences. Each sequence must be in a separate fasta file with names such as "ref_sequence.fasta"
+	-d | --raw : path to a directory containing the raw illumina reads. Each file must be in .fastq.gz format with names such as "sample.fastq.gz"
+	-w | --work : path to working directory : path to an existing directory where the outputs will be stored 
+	-P | --phred : phred score below which bases should be masked with a N in the raw reads (used by seqtk)
+	-t | --threshold : similarity threshold to be used by vsearch to map align the reads 
+	-T | --threads : number of threads to use, default = 1
