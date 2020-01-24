@@ -21,10 +21,10 @@ To set path to the trimmomatic executable, the script must be modified. This can
   # Usage
   
 arguments: 
-	-h | --help : print a help message and exit
-	-r | --ref : path to a directory containing the reference sequences. Each sequence must be in a separate fasta file with names such as "ref_sequence.fasta"
-	-d | --raw : path to a directory containing the raw illumina reads. Each file must be in .fastq.gz format with names such as "sample.fastq.gz"
-	-w | --work : path to working directory : path to an existing directory where the outputs will be stored 
-	-P | --phred : phred score below which bases should be masked with a N in the raw reads (used by seqtk)
-	-t | --threshold : similarity threshold to be used by vsearch to map align the reads 
-	-T | --threads : number of threads to use, default = 1
+-h | --help : print a help message and exit
+-r | --ref : path to a directory containing the reference sequences. Each sequence must be in a separate fasta file with names such as "ref_sequence.fasta"
+-d | --raw : path to a directory containing the raw illumina reads. Each file must be in .fastq.gz format with names such as "sample.fastq.gz"
+-w | --work : path to working directory : path to an existing directory where the outputs will be stored 
+-P | --phred : phred score below which bases should be masked with a N in the raw reads (used by seqtk)
+-t | --threshold : similarity threshold to be used by vsearch to map align the reads 
+-T | --threads : number of threads to use, default = 1
