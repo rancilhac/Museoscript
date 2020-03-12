@@ -35,3 +35,7 @@ arguments:
 -t | --threshold : similarity threshold to be used by vsearch to map align the reads 
 
 -T | --threads : number of threads to use, default = 1
+
+  # Output
+  
+  
