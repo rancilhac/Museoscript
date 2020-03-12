@@ -38,4 +38,9 @@ arguments:
 
   # Output
   
+For each individual present in the raw data directory, the script will create a folder in the working directory containing the following outputs.
+
+For each reference sequences, several files are created with a name in the form ``reference_sequence-in-sample_name``. Four files containing the identifiers of the reads that matched the reference sequence are created: ``*.reads`` contains all the aformetionned identifiers, while ``*.reads.uniq``, ``*.reads.2shared``and ``*.reads.3shared`` contains respectively the reads matching only the given reference, those matching exactly two references and those matching three or more references. These files can be subsequently used to retrieve the reads from the raw data and assemble a consensus sequence (not yet implemented in the present script). Additonnaly, two more outputs are given: ``*.vsearch`` gives the rae output of vsearch, in case manual check is needed; ``*-vsearch.log`` gives the standard output of vsearch, which includes error messages.
+
+Finally, a file named ``summary_sample_name.csv`` is also created. It is a space-delimited table summarizing the whole run, with the following columns: name of reference sequence, name of the sample, number of "unique" matches, number of "2shared" matches and number of "3shared" matches.
   
