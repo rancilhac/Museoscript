@@ -32,7 +32,7 @@ arguments:
 
 -P | --phred : phred score below which bases should be masked with a N in the raw reads (used by seqtk)
 
--t | --threshold : similarity threshold to be used by vsearch to map align the reads 
+-t | --threshold : minimum similarity threshold to consider that a read matches the reference sequence (used by vsearch)
 
 -T | --threads : number of threads to use, default = 1
 
