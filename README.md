@@ -12,9 +12,9 @@ Museoscript uses three external softwares that must be installed in order to use
   
 GNU parralel (https://www.gnu.org/software/parallel/) must also be installed.
   
-To set path to the trimmomatic executable, the script must be modified. This can be done easily by opening the script in a text editor and editing the line 122 to provide the correct path (make sure to change both the path to the executable and to the adapters):
+No other installation is required to run the script, but it must be modified to set the correct path to the trimmomatic executable. This can be done easily by opening the script in a text editor and editing the line 122 to provide the correct path (make sure to change both the path to the executable and to the adapters):
   
-  echo "java -jar path/to/trimmomatic/trimmomatic-0.XX.jar SE -phred33 $i trimmed_reads/$name-trimmed.fastq.gz ILLUMINACLIP:/path/to/trimmomatic/adapters/TruSeq3-SE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:2:25 MINLEN:36 &> trimmed_reads/trimmomatic-$name.log" >> run_trimmomatic
+ `` echo "java -jar path/to/trimmomatic/trimmomatic-0.XX.jar SE -phred33 $i trimmed_reads/$name-trimmed.fastq.gz ILLUMINACLIP:/path/to/trimmomatic/adapters/TruSeq3-SE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:2:25 MINLEN:36 &> trimmed_reads/trimmomatic-$name.log" >> run_trimmomatic ``
   
   This line can be modified to change other settings of Trimmomatic as well.
   
