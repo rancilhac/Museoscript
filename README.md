@@ -1,7 +1,7 @@
 # Museoscript
 # Introduction
 
-Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly to assign them to species and integrate them in phylogenetic analyses in the context of taxonomics and systematics studies. More in details, this script trims and cleans the raw reads and align them to a set of reference sequences based on an user-provided similarity threshold. The output is a summary of the amount of reads matching the different reference sequences, as well as the list of these reads, that can be used to assembled consensus sequences (see details below).
+Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly to assign them to species and integrate them in phylogenetic analyses in the context of taxonomics and systematics studies. More in details, this script trims and cleans the raw reads and align them to a set of reference sequences based on an user-provided similarity threshold. The output is a summary of the amount of reads matching the different reference sequences, as well as the list of these reads, that can be used to assembled consensus sequences (see details below). Note that in the present form the script handles only Single-end data, but it can probably be easily modified to handle Paired-end data as well if needed.
 
 # Dependencies
 
