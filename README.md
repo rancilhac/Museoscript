@@ -3,6 +3,8 @@
 
 Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly to assign them to species and integrate them in phylogenetic analyses in the context of taxonomics and systematics studies. More in details, this script trims and cleans the raw reads and align them to a set of reference sequences based on an user-provided similarity threshold. The output is a summary of the amount of reads matching the different reference sequences, as well as the list of these reads, that can be used to assembled consensus sequences (see details below). Note that in the present form the script handles only Single-end data, but it can probably be easily modified to handle Paired-end data as well if needed.
 
+If you use this script, please cite: Rancilhac, L., Bruy, T., Scherz, M. D., Pereira, E. A., Preick, M., Straube, N., Lyra, M. L., Ohler, A., Streicher, J. W., Andreone, F., Crottini, A., Hutter, C. R., Randrianantoandro,J. C., Rokotoarison, A., Glaw, F., Hofreiter, M. & Vences, M. (2020). Target-enriched DNA sequencing from historical type material enables a partial revision of the Madagascar giant stream frogs (genus Mantidactylus). Journal of Natural History, 1-32.https://doi.org/10.1080/00222933.2020.1748243
+
 # Dependencies
 
 Museoscript uses three external softwares that must be installed in order to use it:
