@@ -5,7 +5,8 @@ Museoscript is a bash script wrapping several programs, aiming to process High-T
 
 The following figure gives an overview of the pipeline (the steps in the dashed box are not implemented in the script yet; frogs pictures courtesy of Mark D. Scherz):
 
-![flowchart](https://user-images.githubusercontent.com/55992265/84680347-d2ea0880-af32-11ea-9885-80de0ac635e5.png)
+
+![flowchart](https://user-images.githubusercontent.com/55992265/84753837-d1b2ed00-afbf-11ea-8863-274829efada3.png)
 
 
 If you use this script, please cite: Rancilhac, L., Bruy, T., Scherz, M. D., Pereira, E. A., Preick, M., Straube, N., Lyra, M. L., Ohler, A., Streicher, J. W., Andreone, F., Crottini, A., Hutter, C. R., Randrianantoandro,J. C., Rokotoarison, A., Glaw, F., Hofreiter, M. & Vences, M. (2020). Target-enriched DNA sequencing from historical type material enables a partial revision of the Madagascar giant stream frogs (genus Mantidactylus). Journal of Natural History, 1-32.https://doi.org/10.1080/00222933.2020.1748243
