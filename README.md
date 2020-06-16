@@ -4,13 +4,13 @@
 Museoscript is a bash script wrapping several programs, aiming to process High-Throughput Sequencing data from historical specimens, particularly to assign them to species and integrate them in phylogenetic analyses in the context of taxonomics and systematics studies. As summarized in the figure below, the pipeline performs the following steps: 1) the raw reads from the historic sample(s) are trimmed and quality checked; 2) the clean reads are aligned to a set of reference sequences using a user-defined similarity threshold and the matching reads are extracted; 3) the number of reads matching each reference sequence is counted; 4) the reads can also be used to construct consensus sequences for e.g. phylogenetic inference (not yet implemented in the script). If several samples are provided, they will be analyzed sequentially. See the "Output" section for more details on the script's output. Note that in the present form the script handles only Single-end data, but it can probably be easily modified to handle Paired-end data as well if needed. 
 
 
-![flowchart](https://user-images.githubusercontent.com/55992265/84753837-d1b2ed00-afbf-11ea-8863-274829efada3.png)
+![flowchart](https://user-images.githubusercontent.com/55992265/84758093-4b99a500-afc5-11ea-8dd9-cf29ee1c298c.png)
 
 
 (Frog pictures courtesy of Mark D. Scherz)
 
 
-If you use this script, please cite: Rancilhac, L., Bruy, T., Scherz, M. D., Pereira, E. A., Preick, M., Straube, N., Lyra, M. L., Ohler, A., Streicher, J. W., Andreone, F., Crottini, A., Hutter, C. R., Randrianantoandro,J. C., Rokotoarison, A., Glaw, F., Hofreiter, M. & Vences, M. (2020). Target-enriched DNA sequencing from historical type material enables a partial revision of the Madagascar giant stream frogs (genus Mantidactylus). Journal of Natural History, 1-32.https://doi.org/10.1080/00222933.2020.1748243
+If you use this script, please cite: Rancilhac, L., Bruy, T., Scherz, M. D., Pereira, E. A., Preick, M., Straube, N., Lyra, M. L., Ohler, A., Streicher, J. W., Andreone, F., Crottini, A., Hutter, C. R., Randrianantoandro,J. C., Rokotoarison, A., Glaw, F., Hofreiter, M. & Vences, M. (2020). Target-enriched DNA sequencing from historical type material enables a partial revision of the Madagascar giant stream frogs (genus Mantidactylus). Journal of Natural History, 1-32. https://doi.org/10.1080/00222933.2020.1748243
 
 # Dependencies
 
