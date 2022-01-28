@@ -109,12 +109,12 @@ fi
 
 if [[ -z $CLEAN ]]
 	then
-		CLEAN="Y"
+		CLEAN=Y
 fi
 
 #### STEP 1 ⁻ Data cleaning ####
 
-if [[ $CLEAN == "Y" ]]
+if [[ $CLEAN = Y ]]
 then
 echo $(date "+%D %H:%M:%S") "- Step 1 : Quality filtering and trimming"
 
