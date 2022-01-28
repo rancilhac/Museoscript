@@ -26,7 +26,8 @@ arguments:\n
 	-w | --work : path to working directory\n
 	-P | --phred : phred score below which bases should be masked with a N\n
 	-t | --threshold : similarity threshold to be used by vsearch to map align the reads\n
-	-T | --threads : number of threads to use. Default = 1;
+	-T | --threads : number of threads to use. Default = 1\n
+	-C | --clean : Y/N, whether to trim adapters and quality check reads before aligning to the reference. Default = Y;
 "
 
 if [[ $# == 0 ]]
@@ -74,7 +75,7 @@ case "$key" in
 	shift
 	shift
 	;;
-		-C | --cleaning)
+		-C | --clean)
 	CLEAN=$2
 	shift
 	shift
@@ -105,16 +106,22 @@ if [[ -z $THREAD ]]
 		THREAD=1
 fi
 
+
+if [[ -z $CLEAN ]]
+	then
+		CLEAN="Y"
+fi
+
 #### STEP 1 ⁻ Data cleaning ####
 
+if [[ $CLEAN == "Y" ]]
+then
 echo $(date "+%D %H:%M:%S") "- Step 1 : Quality filtering and trimming"
 
 cd $RAW
 mkdir trimmed_reads
 
 # store the trimmomatic and seqtk commands to be executed
-if [ $CLEAN == "Y" ]
-then
 for i in *.fastq.gz
 do
 name=$(echo $i | sed 's/\.fastq\.gz//')
