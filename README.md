@@ -43,7 +43,11 @@ arguments:
 
 -t | --threshold : minimum similarity threshold to consider that a read matches the reference sequence (used by vsearch)
 
--T | --threads : number of threads to use, default = 1
+-T | --threads : number of threads to use, default = 1 (it is recommanded to use several threads, as it will significantly speed up the process)
+
+-C | --clean : -C | --clean : Y/N, whether to trim adapters and quality check reads before aligning to the reference. Default = Y (This is useful to align the reads several times - e.g. with different thresholds - without having to run the cleaning steps each time)
+
+(note: all arguments must be set for the program to run properly, except for -T and -C which have default values)
 
   # Output
   
